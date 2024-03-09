@@ -28,21 +28,21 @@ public class Game {
     }
 
     public boolean checkForWin() {
-        // Check rows
+
         for (int i = 0; i < BOARD_SIZE; i++) {
             if (board[i][0].equals(board[i][1]) && board[i][1].equals(board[i][2]) && !board[i][0].equals(" ")) {
                 return true;
             }
         }
 
-        // Check columns
+
         for (int i = 0; i < BOARD_SIZE; i++) {
             if (board[0][i].equals(board[1][i]) && board[1][i].equals(board[2][i]) && !board[0][i].equals(" ")) {
                 return true;
             }
         }
 
-        // Check diagonals
+
         if (board[0][0].equals(board[1][1]) && board[1][1].equals(board[2][2]) && !board[0][0].equals(" ")) {
             return true;
         }

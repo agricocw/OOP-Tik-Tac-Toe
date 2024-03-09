@@ -41,7 +41,7 @@ public class GameGUI extends JFrame {
             JButton clickedButton = (JButton) e.getSource();
             int row = -1, col = -1;
 
-            // Find the row and column of the clicked button
+
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
                     if (buttons[i][j] == clickedButton) {
@@ -52,7 +52,7 @@ public class GameGUI extends JFrame {
                 }
             }
 
-            // Make a move on the board
+
             if (row != -1 && col != -1) {
                 if (game.makeMove(row, col)) {
                     clickedButton.setText(game.getCurrentPlayerSymbol());
